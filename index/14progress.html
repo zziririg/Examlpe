@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>progress</title>
+</head>
+<body>
+
+  <article>
+
+    <dl>
+      <dt>progress</dt>
+      <dd>작업 진행률 표시, 로딩바</dd>
+      <dd>속성은 max(작업총량), value(작업진행량)이며 value는 JS로 많이 작업함</dd>
+    </dl>
+    <progress max="100" value="80"></progress>
+    <br>
+    <progress value="0.8"></progress>  <!--max생략할 경우 value에 0~1사이의 숫자입력-->
+    <br>
+    <progress class="test" max="100" value="0"></progress>
+    <script>
+      const progress = document.querySelector('.test');
+      const interval = setInterval(function () {
+        progress.value += 10;
+        if (progress.value >= 100) clearInterval(interval);
+      },1000)
+    </script>
+  </article>
+  
+</body>
+</html>

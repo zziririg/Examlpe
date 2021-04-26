@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>select, option, optgroup, datalist</title>
+</head>
+<body>
+  
+  <h2>select, datalist, optgroup, option</h2>
+<dl>
+  <dt>select</dt>
+  <dd>옵션을 선택하는 메뉴</dd>
+  <dt>option</dt>
+  <dd>선택메뉴나 자동완성에서 사용될 옵션</dd>
+  <dt>optgroup</dt>
+  <dd>option들을 그룹화</dd>
+  <dt>datalist</dt>
+  <dd>input에 미리 정의된 옵션을 지정하여 자동완성 기능을 제공/datalist의 id값=input의 list값</dd>
+</dl>
+
+
+<article>
+  <h3>속성사용 예제1</h3>
+  <select name="fruits" >
+    <option value="">Apple</option>
+    <option value="Orange" label="Orange">
+    <!--빈태그로도 사용가능 단, value, label 필수 입력-->
+    <optgroup label="Yellows">
+      <option selected>Banana</option>
+      <option value="">Mango</option>
+    </optgroup>
+    <optgroup label="no fruits" disabled>
+      <option value="">potato</option>
+    </optgroup>
+  </select>
+</article>
+
+
+<article>
+  <h3>속성사용 예제2</h3>
+  <select name="fruits" multiple>
+    <option value="">Apple</option>
+    <option value="">Orange</option>
+    <option value="">Banana</option>
+    <option value="">Mango</option>
+    <option value="">Fineapple</option>
+  </select>
+</article>
+
+<article>
+  <h3>속성사용 예제3</h3>
+  <select name="fruits" size="3" disabled>
+    <option value="">Apple</option>
+    <option value="">Orange</option>
+    <option value="">Banana</option>
+    <option value="">Mango</option>
+    <option value="">Fineapple</option>
+  </select>
+</article>
+
+<article>
+  <h3>속성사용 예제4</h3>
+  <input type="text" list="fruits">
+
+  <datalist id="fruits">
+    <option>Apple</option>
+    <option>Orange</option>
+    <option>Banana</option>
+    <option>Mango</option>
+    <option>Fineapple</option>
+  </datalist>
+</article>
+
+</body>
+</html>
