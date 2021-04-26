@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>srcset, sizes 테스트</title>
+</head>
+<body>
+  <h2>
+    srcset 테스트 
+  </h2>
+  <p>
+    개발자 도구에서 뷰포트 크기에 따라 불러오는 이미지 크기가 달라짐
+  </p>
+  <img
+  srcset="images/heropy_small.png 400w,
+          images/heropy_medium.png 700w,
+          images/heropy_large.png 1000w"
+  width=400;
+  src="images/heropy.png"
+  alt="HEROPY" />
+
+  <h2>
+    sizes 테스트
+  </h2>
+  <p>
+    현재 sizes="(min-width: 1000px) 700px" 설정이기 때문에 뷰포트가 1000px이상 넘어가면 <br>
+    large가 아니라 medium사이즈(700px)의 사진이 출력됨. 그러나 지금은 위에 srcset 때문에<br>
+    제대로 작동하지 않고, 위에 srcset을 주석처리하면 제대로 출력이됨.
+  </p>
+
+  <img
+  srcset="images/heropy_small.png 400w,
+          images/heropy_medium.png 700w,
+          images/heropy_large.png 1000w"
+  sizes="(min-width: 1000px) 700px"      
+  src="images/heropy.png"
+  alt="HEROPY" />
+</body>
+</html>

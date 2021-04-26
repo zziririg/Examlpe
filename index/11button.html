@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bytton 태그 테스트</title>
+</head>
+<body>
+  
+  <input type="reset" value="초기화">
+  <button type="reset">초기화</button>
+<!-- 둘 다 결과물은 똑같음 -->
+<hr>
+  <input type="submit" value="제출">
+  <button type="submit">제출</button>
+<!-- 둘 다 결과물은 똑같음 -->
+<hr>
+  <button onclick="doIt()">클릭하세요</button>
+  <script>
+    function doIt() {
+      alert('클릭했음');
+    }
+  </script>
+<!-- 보통의 경우 button태그에는 위와같이 JS기능을 붙여서 사용함 -->
+</body>
+<hr>
+
+</html>

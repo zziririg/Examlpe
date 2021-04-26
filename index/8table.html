@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tabel 표 태그</title>
+  <link rel="stylesheet" href="../css/main6.css">
+</head>
+<body>
+  <table> <!--표 영역 정의-->
+    <tr>
+      <th colspan="2" id="th-data">데이터</th>
+    </tr>
+    <tr>  <!--tr:table row-->
+      <th abbr="Type" scope="col" headers="th-data">타입</th> <!--th:table header 머리글 칸-->
+      <th abbr="Value" scope="col" headers="th-data">값</th>   
+    </tr>
+    <tr>
+      <td>알파벳</td>  <!--td:table data-->
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>숫자</td>
+      <td>7</td>
+    </tr>
+  </table>
+
+  <hr>
+
+  <table> 
+    <caption>데이터 타입과 값</caption>  <!--표 제목-->
+    <tr>
+      <Th rowspan="2" id="th-data">데이터</Th>
+      <Th headers="th-data" id="th-type">타입</Th>
+      <Td headers="th-type">알파벳</Td>
+      <Td headers="th-type">숫자</Td>
+    </tr>
+    <tr>
+      <th headers="th-data" id="th-value">값</th>
+      <td headers="th-value">A</td>
+      <td headers="th-value">7</td>
+    </tr>
+  </table>
+
+  <hr>
+
+  <table> 
+    <caption>데이터 타입과 값</caption>
+    <colgroup>  <!--col태그를 그룹짓는 역할 -->
+      <col style="background-color: tomato;" span="2" />
+      <col  /> <!--각 열을 선택해 스타일을 지정함/ span으로 여러 열 선택가능-->
+      <col  />
+    </colgroup>
+    <tr>  
+      <th></th>
+      <th>타입</th> 
+      <th>값</th>   
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>알파벳</td> 
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>숫자</td>
+      <td>7</td>
+    </tr>
+  </table>
+
+  <hr>
+
+  <table>
+    <caption>Fruits</caption>
+    <colgroup>
+      <col span="2" style="background-color: yellowgreen;">
+      <col style="background-color: tomato;">
+    </colgroup>
+    <thead>    <!--표의 머리글/표 레이아웃에 영향안줌/ 의미적 표시-->
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>  <!--표의 본문/표 레이아웃에 영향안줌/ 의미적 표시 / tfoot도 있음-->
+      <tr>
+        <td>F123A</td>
+        <td>Apple</td>
+        <td>$22</td>
+      </tr>
+      <tr>
+        <td>F098B</td>
+        <td>Banana</td>
+        <td>$19</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <table style="border: 1px solid #000;">
+    
+    <tr style="margin: auto; text-align: center;">
+      <td style="border-bottom: 2px solid gray;">속성</td>
+      <td style="border-bottom: 2px solid gray;">의미</td>
+      <td style="border-bottom: 2px solid gray;">값</td>
+      <td style="border-bottom: 2px solid gray;">기본값</td>
+    </tr>
+    <tr>
+      <td>action</td>
+      <td>전송한 정보를 처리할 웹페이지의 URL</td>
+      <td>URL</td>
+      <td>없음</td>
+    </tr>
+    <tr style="background-color: lightgray;">
+      <td>autocomplete</td>
+      <td>자동 완성 기능 사용 여부</td>
+      <td>on, off</td>
+      <td>on</td>
+    </tr>
+    <tr>
+      <td>method</td>
+      <td>서버로 전송할 HTTP방식 <br>
+          GET:입력정보 URL에 표시됨/POST:입력정보 URL에 표시안됨(권장)</td>
+      <td>GET, POST</td>
+      <td>GET</td>
+    </tr>
+    <tr style="background-color: lightgray;">
+      <td>name</td>
+      <td>보낼 양식의 이름</td>
+      <td>내맘대로</td>
+      <td>없음</td>
+    </tr>
+    <tr>
+      <td>novalidate</td>
+      <td>서버로 전송시 입력받은 데이터의 유효성 검사 하지 않도록함</td>
+      <td>없음</td>
+      <td>없음</td>
+    </tr>
+    <tr style="background-color: lightgray;">
+      <td>target</td>
+      <td>서버로 전송 후 응답받을때 현재 탭에 열건지 새 탭에 열건지 지정</td>
+      <td>_self(현재창), _blank(새창)</td>
+      <td>_self</td>
+    </tr>
+
+
+  </table>
+</body>
+</html>

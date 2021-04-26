@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>input태그 테스트</title>
+</head>
+<body>
+
+  <form action="/login" id="login-form">
+    <input type="text"
+           autofocus
+           maxlength="6">
+    <input type="email" name="id">
+    <input type="password" name="pw">
+    <button>그냥 로그인 버튼</button>
+    <input type="submit" value="서버에 제출 가능한 로그인 버튼">
+    <input type="reset" value="초기화">
+
+  </form>
+  <!-- 
+    autofocus: 웹페이지 처음 열면 포커스 되도록 함
+    matlength: 최대 입력 글자 갯수
+    name: 데이터 이름 지정 class와 유사
+    <button>: 물리 버튼 생성(기능 없음)
+    submit: 실제 서버제출 가능한 버튼 생성
+    reser: form태그 내의 입력내용 초기화 버튼 생성
+    value: 실제 표시될 값(텍스트)
+  -->
+  <hr>
+  <input type="text" form="login-form">
+  <!--form: form태그 요소 바깥에 있어도 form태그 요소 내부의 id와 연결 가능-->
+  
+  <hr>
+    <input type="number"> <!--숫자 입력 요소 생성-->
+    <input type="number" value="1234">
+    <input type="number" value="1234" readonly> 
+    <!--readonly: 보여지기만 하고 내용 입력 안됨-->
+    <input type="number" value="1234" disabled>
+    <!--disabled: 비활성화-->
+    <input type="number" placeholder="숫자를 입력하세요">
+    <!--데이터 입력전 힌트를 표시-->
+    <input type="number" max="10" min="3">
+    <!--max: 입력 가능 최대수치, min: 입력 가능 최소수치-->
+    <input type="number" step="2">
+    <!--step: 입력되는 숫자간의 간격 -->
+
+
+
+
+  <hr>
+
+  <input type="checkbox">
+  <input type="checkbox" checked> 
+  <!--check: 이미 체크됨-->
+
+  <hr>
+
+  <input type="file">
+  <!--file: 단일파일 첨부 요소 생성-->
+  <input type="file" multiple>
+  <!--meltiple: 여러파일 첨부 요소 생성-->
+
+  <hr>
+
+  <form action="/login">
+    <input type="image" src="/example/html example/images/heropy_small.png" alt="heropy">
+  </form>
+  <!--image: form에서 지정한 경로로 이동가능한 이미지 파일 생성-->
+  <hr>
+
+  <input type="radio" name="radio1">
+  <!--radio: 택1 가능한 체크박스 1개 생성(name으로 묶어서 관리, 예:4지선다 문제)-->
+  <input type="radio" name="radio1">
+  <input type="radio" name="radio2" checked>
+  <input type="radio" name="radio2">
+
+  
+</body>
+</html>

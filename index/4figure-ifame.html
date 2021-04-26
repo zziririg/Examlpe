@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>figure, iframe 태그 테스트</title>
+</head>
+<body>
+
+  <figure>
+    <img src="./images/heropy.png" alt="사진">
+    <figcaption>사진입니다.</figcaption>
+  </figure>
+  <!-- 위처럼 작성하면 같은 이미지,텍스트라도 하나의 figure로 인식 -->
+
+  <iframe width="1904"  
+          height="768" 
+          src="https://www.youtube.com/embed/6X537qmBny4" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen></iframe>
+  <!-- 현재 페이지에 다른html을 삽입 -->
+  <!-- 보통 유튜브나 비메오 등을 가져오기 위한 용도로 씀 -->
+
+  <iframe src="https://wikipedia.com" 
+          frameborder="0" 
+          width="70%"
+          height="600px"
+          name="위키피디아"
+          allowfullscreen
+          sandbox></iframe>
+          <!-- sandbox는 보안상 필요한 요소를 제외하고 보여주게 한다 -->
+
+
+
+</body>
+</html>
